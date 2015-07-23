@@ -103,7 +103,7 @@ def iterate_genres(artist_name, iterations=3):
     for genres in individual_genre_maps:
         print('Just one nerd\'s opinions on', artist_name + ':')
         print(genres, '\n')
-    print('===========================================')
+    print('===========================================\n')
     print('Aggregate genre map for', artist_name)
     print(aggregate_genres)
 
