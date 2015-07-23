@@ -2,7 +2,7 @@ import spotipy
 import sys
 import random
 
-"""Produces several genre mappings for a given artist. Takes in the artist and number of maps to be produced from the command line. There is an element of randomness, so the maps will differ as they iterate - the equivalent of music nerds arguing over musical genre."""
+"""Produces several genre mappings for a given artist. Takes in the artist and number of maps to be produced from the command line. There is an element of randomness, so the maps will differ as they iterate - the equivalent of music nerds arguing over musical genre. If things look wonky, make sure you are escaping spaces in the command line."""
 
 # takes in the name of artist from the command line. defaults to weezer if no name is given. also takes in the number of iterations to be made from command line. 
 
@@ -111,7 +111,7 @@ def iterate_genres(artist_name, iterations):
         print('Just one nerd\'s opinions on', artist_name + ':')
         print(genres, '\n')
     print('===========================================\n')
-    print('Aggregate genre map for', artist_name)
+    print('Aggregate genre map for', artist_name, '\n')
     print(aggregate_genres)
 
 iterate_genres(artist_name, iterations)
