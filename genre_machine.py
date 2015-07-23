@@ -2,12 +2,19 @@ import spotipy
 import sys
 import random
 
-# takes in the name of artist from the command line. defauls to weezer if no name is given.
+"""Produces several genre mappings for a given artist. Takes in the artist and number of maps to be produced from the command line. There is an element of randomness, so the maps will differ as they iterate - the equivalent of music nerds arguing over musical genre."""
 
-if len(sys.argv) > 1:
+# takes in the name of artist from the command line. defaults to weezer if no name is given. also takes in the number of iterations to be made from command line. 
+
+if len(sys.argv) == 3:
     artist_name = sys.argv[1]
+    iterations = int(sys.argv[2])
+elif len(sys.argv) == 2:
+    artist_name = sys.argv[1]
+    iterations = 3
 else:
     artist_name = 'weezer'
+    iterations = 3
 
 def genre_machine(artist_name, genres=[], counter=0, change='False'):
     """Generates a genre map for a given artist. To do so, it pulls in all genres for that artist as well as its related artists. Then it picks one of those related artists at random to follow the genealogy. If the aggregated genre list does not change after twenty new artists (the same number as listed on the related artist pages), the system assumes it has achieved a threshold genre mapping for this particular track and moves on."""
@@ -81,7 +88,7 @@ def genre_machine(artist_name, genres=[], counter=0, change='False'):
     
     return genres
 
-def iterate_genres(artist_name, iterations=3):
+def iterate_genres(artist_name, iterations):
     """Runs the genre machine function as many times as is wanted. Produces individual genre maps as well as an aggregate of them."""
     individual_genre_maps = []
     aggregate_genres = []
@@ -107,4 +114,4 @@ def iterate_genres(artist_name, iterations=3):
     print('Aggregate genre map for', artist_name)
     print(aggregate_genres)
 
-iterate_genres(artist_name, 3)
+iterate_genres(artist_name, iterations)
