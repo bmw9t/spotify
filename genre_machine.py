@@ -106,7 +106,7 @@ def iterate_genres(artist_name, iterations):
             individual_genre_maps.append(genres)
     # produce output
     print('===========================================\n')
-    print('Individual genre Maps\n')
+    print('Individual genre maps\n')
     for genres in individual_genre_maps:
         print('Just one nerd\'s opinions on', artist_name + ':')
         print(genres, '\n')
