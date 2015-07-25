@@ -2,7 +2,15 @@ import spotipy
 import sys
 import random
 
-"""Produces several genre mappings for a given artist. Takes in the artist and number of maps to be produced from the command line. There is an element of randomness, so the maps will differ as they iterate - the equivalent of music nerds arguing over musical genre. If things look wonky, make sure you are escaping spaces in the command line."""
+"""Produces several genre mappings for a given artist. Takes in the artist and number of maps to be produced from the command line: 
+
+$ python genre_machine.py Queen 5
+
+or
+
+$ python genre_machine.py The\ Strokes 3 
+
+There is an element of randomness, so the maps will differ as they iterate - the equivalent of music nerds arguing over musical genre. If things look wonky, make sure you are escaping spaces in the command line."""
 
 # takes in the name of artist from the command line. defaults to weezer if no name is given. also takes in the number of iterations to be made from command line. 
 
