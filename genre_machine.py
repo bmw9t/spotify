@@ -13,7 +13,7 @@ elif len(sys.argv) == 2:
     artist_name = sys.argv[1]
     iterations = 3
 else:
-    artist_name = 'weezer'
+    artist_name = 'Queen'
     iterations = 3
 
 def genre_machine(artist_name, genres=[], counter=0, change='False'):
